@@ -1,0 +1,3 @@
+rootProject.name = 'com.goit'
+gradle.ext.storageDir = '/tmp'
+
