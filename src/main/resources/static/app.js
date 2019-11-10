@@ -21,6 +21,16 @@ function connect() {
         stompClient.subscribe('/topic/greetings', function (greeting) {
             showGreeting(JSON.parse(greeting.body).content);
         });
+        stompClient.subscribe('/topic/retrieveTree', function (retrieveTree) {
+            $('#jstree').jstree({
+                'core': {
+                    "data": JSON.parse(retrieveTree.body),
+                    "check_callback": true
+                },
+                "plugins": ["contextmenu"]
+            })
+        });
+        stompClient.send("/app/root-tree", {});
     });
 }
 
