@@ -1,4 +1,4 @@
-package com.goit;
+package com.goit.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
