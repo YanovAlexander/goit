@@ -43,7 +43,6 @@ public class NodeService {
 
     public Node download(String path) throws IOException {
         File file = new File(rootTree + path);
-
         if (file.exists() && file.isFile()) {
             byte[] bytes = FileUtils.readFileToByteArray(file);
             return new Node(null, file.getName(), null, null, bytes);
@@ -60,11 +59,9 @@ public class NodeService {
 
     private static List<Node> dirTree(File dir, List<Node> nodes) {
         File[] subdirs = dir.listFiles();
-
         if (subdirs == null) {
             return new ArrayList<>();
         }
-
         for (File subdir : subdirs) {
             if (subdir.isDirectory()) {
                 Node directory = new Node();
