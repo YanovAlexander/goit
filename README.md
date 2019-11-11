@@ -6,13 +6,13 @@ The root dir is set in settings.gradle file.<br>
 When you click the "Connect" button root folder displayed with all the files and folders.
 
 **Actions:**
-- Upload file. 
+- Upload file.</br> 
 You can upload a file, whose size should be less than 100 kb.
-- Delete
+- Delete</br>
 When you click the "Delete" button, the file or folder will be deleted from the external storage.
-- Download 
+- Download </br>
 When you click on this button, the file download starts.
-- Connect
+- Connect</br>
 When you click on this button, the connection socket opens and a request is sent to load the root tree.
 
 **Startup:**
